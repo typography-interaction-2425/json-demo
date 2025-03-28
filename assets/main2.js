@@ -1,5 +1,3 @@
-let names = []
-
 document.querySelector('form').oninput = (event) => {
   let name = document.querySelector('#name').value
   document.querySelector('#name-heading').textContent = name
@@ -21,13 +19,39 @@ document.querySelector('form').onsubmit = (event) => {
     name: nameValue,
     color: colorValue,
   }
+
+  // get names from local storage
+  let names = localStorage.getItem('names')
+
+  // names may not exist at this point
+  if (!names) {
+    // if there are are no names, set it to an empty array
+    names = []
+  } else {
+    // if there are names, parse them from how they were stored in local storage
+    names = JSON.parse(names)
+  }
+
   names.push(nameObject)
+
+  // store names in local storage
+  localStorage.setItem('names', JSON.stringify(names))
   renderNames()
 }
 
 const renderNames = () => {
   let namesList = document.querySelector('#names')
   namesList.innerHTML = ''
+
+  let names = localStorage.getItem('names')
+  // names may not exist at this point
+  if (!names) {
+    // if there are are no names, set it to an empty array
+    names = []
+  } else {
+    // if there are names, parse them from how they were stored in local storage
+    names = JSON.parse(names)
+  }
 
   names.forEach((nameObject) => {
     let nameItem = `
@@ -36,3 +60,10 @@ const renderNames = () => {
     namesList.insertAdjacentHTML('beforeend', nameItem)
   })
 }
+
+document.querySelector('#clear-names').onclick = () => {
+  localStorage.removeItem('names')
+  renderNames()
+}
+
+renderNames()
