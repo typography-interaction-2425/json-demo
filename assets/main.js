@@ -3,7 +3,7 @@ let renderItems = (data) => {
 
   data.forEach(item => {
     let rating = item['Rating']
-    let className = ''
+    let className = 'visited'
 
     if (rating === '-') {
       rating = 'No rating'
@@ -32,3 +32,11 @@ fetch('assets/data.json')
     // And passes the data to the function, above!
     renderItems(data)
   })
+
+document.querySelector('#hide-visited').onclick = () => {
+  document.querySelector('#pizza-places').classList.add('hide-visited')
+}
+
+document.querySelector('#show-all').onclick = () => {
+  document.querySelector('#pizza-places').classList.remove('hide-visited')
+}
