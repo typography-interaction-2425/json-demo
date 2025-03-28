@@ -7,6 +7,7 @@
   <title>JSON + Input</title>
 
   <script src="assets/main.js" defer></script>
+  <script src="assets/names.js" defer></script>
   <style>
     .no-rating {
       opacity: 0.5;
@@ -15,20 +16,35 @@
     #pizza-places.hide-visited .visited {
       display: none;
     }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
   </style>
 </head>
 
 <body>
   <h1>Hello</h1>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name">
-    <button type="submit">Submit</button>
-  </form>
+  <div class="grid">
+    <div>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+      </form>
 
-  <button id="hide-visited">Hide Visited</button>
-  <button id="show-all">Show All</button>
-  <ul id="pizza-places"></ul>
+      <button id="hide-visited">Hide Visited</button>
+      <button id="show-all">Show All</button>
+      <ul id="pizza-places"></ul>
+    </div>
+    <div>
+      <ul id="names">
+
+      </ul>
+    </div>
+  </div>
 </body>
 
 </html>
