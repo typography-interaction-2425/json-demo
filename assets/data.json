@@ -19,5 +19,19 @@
     "Borough": "Brooklyn",
     "Rating": 4,
     "Notes": "Get cheese"
+  },
+  {
+    "Place": "Lucali",
+    "Location": "575 Henry St, Brooklyn, NY 11231",
+    "Borough": "Brooklyn",
+    "Rating": "-",
+    "Notes": ""
+  },
+  {
+    "Place": "Joe’s Pizza",
+    "Location": "7 Carmine St, New York, NY 10014",
+    "Borough": "Manhattan",
+    "Rating": 3.5,
+    "Notes": "Nice post bar food"
   }
 ]
