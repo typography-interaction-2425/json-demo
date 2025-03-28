@@ -1,0 +1,23 @@
+[
+  {
+    "Place": "Scarr’s",
+    "Location": "35 Orchard St, New York, NY 10002",
+    "Borough": "Manhattan",
+    "Rating": 4.5,
+    "Notes": "Not as good since it moved to the new location"
+  },
+  {
+    "Place": "Best Pizza",
+    "Location": "33 Havemeyer St, Brooklyn, NY 11211",
+    "Borough": "Brooklyn",
+    "Rating": 4.5,
+    "Notes": "Garlic knots are great"
+  },
+  {
+    "Place": "Norm’s",
+    "Location": "345 Adams St, Brooklyn, NY 11201",
+    "Borough": "Brooklyn",
+    "Rating": 4,
+    "Notes": "Get cheese"
+  }
+]
